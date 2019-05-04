@@ -12,7 +12,7 @@ services:
     
   mysql:
    container_name: v-mysql
-   image: mysql/mysql-server:5.7
+   image: mysql/mysql-server:5.1.47
    environment:
     MYSQL_DATABASE: test
     MYSQL_ROOT_PASSWORD: root
@@ -33,4 +33,4 @@ services:
     depends_on:
       - nginx
       - mysql
-    command: mvn clean spring-boot:run -Dspring-boot.run.profiles=dev
+    command: mvn clean spring-boot:run -Dspring-boot.run.profiles=docker
