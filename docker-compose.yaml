@@ -21,5 +21,4 @@ services:
       - "8080"
     depends_on:
       - nginx
-      - mysql
     command: mvn clean spring-boot:run -Dspring-boot.run.profiles=docker
